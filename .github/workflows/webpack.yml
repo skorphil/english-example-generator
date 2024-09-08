@@ -1,9 +1,9 @@
-name: Build with Webpack
+name: Build and Commit with Webpack
 
 on:
   push:
     branches:
-      - main  # You can change this to your preferred branch
+      - main  # Trigger on pushes to the main branch (you can change this)
 
 jobs:
   build:
@@ -24,8 +24,13 @@ jobs:
       - name: Build with Webpack
         run: npm run build
 
-      - name: Upload built files
-        uses: actions/upload-artifact@v3
-        with:
-          name: dist
-          path: dist
+      # Commit the dist folder back to the repository
+      - name: Commit and push changes
+        run: |
+          git config --local user.name "GitHub Actions"
+          git config --local user.email "actions@github.com"
+          git add dist/  # Stage changes in the dist folder
+          git commit -m "Build: Commit dist folder"
+          git push origin main  # Push changes back to the main branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
