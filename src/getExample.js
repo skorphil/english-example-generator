@@ -7,7 +7,7 @@ const initialMessages = [
     content: [
       {
         type: "text",
-        text: 'You are an language teacher. Please provide a meaningful complex example (C1 level) for a provided word or phrase with provided meaning. The source word or phrase should be replaced with "***". Do not write anything else except the example',
+        text: 'You are an language teacher. Please provide a meaningful complex example (C1 level) for a provided word or phrase with provided meaning. The source word or phrase should be replaced with "<span id="hidden"></span>". Do not write anything else except the example',
       },
     ],
   },
@@ -16,7 +16,7 @@ const initialMessages = [
     content: [
       {
         type: "text",
-        text: "Please give me another sentence for the word or phrase '''to ramble''' with meaning '''to move aimlessly from place to place''', use the same language.",
+        text: "Please give me another sentence for the word or phrase 'to ramble' with meaning 'to move aimlessly from place to place', use the same language.",
       },
     ],
   },
@@ -25,25 +25,7 @@ const initialMessages = [
     content: [
       {
         type: "text",
-        text: "He spent the afternoon *** through the forest, not really heading anywhere in particular.",
-      },
-    ],
-  },
-  {
-    role: "user",
-    content: [
-      {
-        type: "text",
-        text: 'Please give me another sentence for "capital" with a meaning "punishable by death". For the example use these topics: nature, home, science',
-      },
-    ],
-  },
-  {
-    role: "assistant",
-    content: [
-      {
-        type: "text",
-        text: "In ancient societies, stealing sacred objects from the temple was considered a *** crime.",
+        text: 'He spent the afternoon <span id="hidden"></span> through the forest, not really heading anywhere in particular.',
       },
     ],
   },
@@ -55,7 +37,7 @@ async function getExample(authToken, word, meaning) {
     {
       role: "user",
       content: `Please give me another sentence for "${word}" with a meaning "${meaning}". 
-        For the example use these topics ${getRandomTopics()}`,
+      For the example use these topics ${getRandomTopics()}`,
     },
   ];
 
