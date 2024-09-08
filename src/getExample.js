@@ -49,7 +49,7 @@ const initialMessages = [
   },
 ];
 
-async function getExample(authToken, word, meaning) {
+export async function getExample(authToken, word, meaning) {
   const messages = [
     ...initialMessages,
     {
@@ -67,5 +67,3 @@ async function getExample(authToken, word, meaning) {
     return "No completion found or error in response data.";
   }
 }
-
-export default getExample;
