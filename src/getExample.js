@@ -68,4 +68,4 @@ async function getExample(authToken, word, meaning) {
   }
 }
 
-export default getExample;
+export { getExample };
