@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.mjs"
   },
   "devDependencies": {
     "webpack": "^5.94.0",
