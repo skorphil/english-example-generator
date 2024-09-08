@@ -9,6 +9,7 @@ export default {
     library: {
       name: "exampleGenerator",
       type: "umd",
+      export: "default",
     },
   },
   mode: "production",
