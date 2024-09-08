@@ -7,7 +7,7 @@ const initialMessages = [
     content: [
       {
         type: "text",
-        text: 'You are an language teacher. Please provide a meaningful complex example (C1 level) for a provided word or phrase with provided meaning. The source word or phrase should be replaced with "***". And add meaning to the end of sentence like "({meaning})"Do not write anything else except the example',
+        text: 'You are an language teacher. Please provide a meaningful complex example (C1 level) for a provided word or phrase with provided meaning. The source word or phrase should be replaced with "***". Do not write anything else except the example',
       },
     ],
   },
@@ -25,7 +25,7 @@ const initialMessages = [
     content: [
       {
         type: "text",
-        text: "He spent the afternoon *** through the forest, not really heading anywhere in particular.  (to move aimlessly from place to place)",
+        text: "He spent the afternoon *** through the forest, not really heading anywhere in particular.",
       },
     ],
   },
