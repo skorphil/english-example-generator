@@ -1,0 +1,10 @@
+{
+  "name": "vocabulary-example-generator",
+  "license": "GPL-3.0-only",
+  "private": false,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
+  }
+}
