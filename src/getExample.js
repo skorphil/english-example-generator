@@ -43,7 +43,7 @@ const initialMessages = [
     content: [
       {
         type: "text",
-        text: "In ancient societies, stealing sacred objects from the temple was considered a *** crime. (punishable by death)",
+        text: "In ancient societies, stealing sacred objects from the temple was considered a *** crime.",
       },
     ],
   },
